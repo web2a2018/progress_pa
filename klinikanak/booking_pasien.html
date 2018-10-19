@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+	/* The kontener */
+	.kontener {
+		display: block;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 22px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	/* Hide the browser's default checkbox */
+	.kontener input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	/* Create a custom checkbox */
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 25px;
+		width: 25px;
+		background-color: #eee;
+	}
+
+	/* On mouse-over, add a grey background color */
+	.kontener:hover input ~ .checkmark {
+		background-color: #ccc;
+	}
+
+	/* When the checkbox is checked, add a blue background */
+	.kontener input:checked ~ .checkmark {
+		background-color: red;
+	}
+
+	/* Create the checkmark/indicator (hidden when not checked) */
+	.checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	/* Show the checkmark when checked */
+	.kontener input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+	/* Style the checkmark/indicator */
+	.kontener .checkmark:after {
+		left: 9px;
+		top: 5px;
+		width: 5px;
+		height: 10px;
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+</style>
+<title>Pasien</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet"  href="css/style.css">
+
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+				data-target=".sidebar-collapse" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Klinik Anak</a>
+		</div>
+
+	</nav>
+	<nav class="navbar-default navbar-side">
+		<div class="sidebar-collapse">
+			<div class="user">
+				<img src="img/user.png">
+				<h3>Nama Pasien</h3>
+			</div>
+			<ul class="nav" id="main-menu">
+				<li><a href="profile_pasien.html"> <i class="fa fa-user"></i> Profile</a></li>
+				<li><a href="booking_pasien.html"> <i class="fa fa-calendar"></i> Booking</a></li>
+
+				<li><a href="antrian_pasien.html"> <i class="fa fa-handshake-o"></i> Antrian</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="page-wrapper">
+		<div class="page-inner">
+			<h3>Booking</h3>
+
+			<br>
+			<br>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-6 col-xs-offset-3">
+						<h3><b>- - - Pilih Waktu Periksa Anda - - -</b></h3>
+
+						<br>
+						<br>
+						
+						<label class="kontener">08:00
+							<input type="checkbox" checked="checked">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">08:15
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">08:30
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">08:45
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">09:00
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">09:15
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">09:30
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">09:45
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">10:00
+							<input type="checkbox">
+							<span class="checkmark"></span>
+
+						</label>
+						<label class="kontener">10:15
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">10:30
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="kontener">10:45
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>	
+					</div>
+					
+				</div>
+			</div>
+
+
+
+			
+
+
+
+		</div>	
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
+
+
+
+
+
+<!--  -->
+<script src="sendiri.js"> </script>
+
+
+</body>
+</html>

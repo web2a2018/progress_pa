@@ -1,0 +1,108 @@
+<!-- css desktop & mobile -->
+/*memanggil css id masih gagal*/
+/*wrapper gagal(awalnya id)*/
+/*css body (font gagal)*/
+body, html{
+  font-family: 'Montserrat', sans-serif;
+}
+.wrapper{
+ width: 100%;
+ background: #f3f3f3;
+}
+.navbar{
+  margin-bottom: 0px;
+}
+.navbar-default{
+  background: #537bbd;
+}
+.navbar-default .navbar-brand{
+  color: #f3f3f3;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: #f3f3f3;
+}
+
+.navbar-default .navbar-brand:visited{
+  color: #f3f3f3;
+}
+
+.navbar-default .navbar-toggle .icon-brand{
+  background-color: #f3f3f3;
+}
+
+
+.navbar-side{
+  background: #FFFFFF;
+}
+.navbar-side .user{
+  padding: 20px;
+  text-align: center;
+
+}
+
+.navbar-side .user img{
+  width: 30%;
+}
+
+.navbar-side .user h3{
+
+  font-size: 22px;
+}
+.navbar-side ul li{
+  border-bottom: 1px solid #f3f3f3;
+}
+.navbar-side ul li:hover a{
+  color:#537bbd;
+}
+.navbar-side ul li a{
+  color: #537bbd;
+}
+.page-wrapper{
+  padding: 15px;
+  background: #f3f3f3;
+}
+.page-inner{
+  padding: 15px;
+  background: #FFFFFF;
+}
+.page-inner{
+  min-height: 1000px;
+}
+
+.page-inner .form-group{
+  width: 70%;
+}
+.page-inner .input-group date .form-group{
+  width: 70%;
+}
+.page-inner hr{
+  background-color: #537bbd;
+  color: #537bbd;
+  bottom: 0px;
+  width: 20%;
+  height: 2px;
+
+}
+.button-edit{
+  color: white;
+  background: #00A6FF; 
+}
+.button-delete{
+  color: white;
+  background: #FF061A;
+}
+/*spesifik css ke desktop*/
+@media(min-width: 768px){
+  .page-wrapper{
+    margin: 0 0 0 260px;
+    padding: 15px;
+    min-height: 1000px;
+  }
+  .navbar-side{
+    width: 260px;
+    position: absolute;
+    z-index: 1;
+    min-height: 1000px;
+  }
+}

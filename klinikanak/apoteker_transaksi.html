@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apoteker</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet"  href="css/style.css">
+
+</head>
+<body>
+
+ <div class="wrapper">
+
+  <nav class="navbar navbar-default">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+    data-target=".sidebar-collapse" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#">Klinik Anak</a>
+</div>
+
+</nav>
+<nav class="navbar-default navbar-side">
+ <div class="sidebar-collapse">
+  <div class="user">
+    <img src="img/user.png">
+    <h3>Nama Apoteker</h3>
+  </div>
+  <ul class="nav" id="main-menu">
+    <li><a href="apoteker_obat.html"> <i class="fa fa-tablet"></i> Obat</a></li>
+    <li><a href="apoteker_transaksi.html"> <i class="fa fa-handshake-o"></i> Transaksi</a></li>
+  </ul>
+</div>
+</nav>
+<div class="page-wrapper">
+ <div class="page-inner">
+  <h3>Data Transaksi</h3>
+  
+
+
+  <br>
+  <br>
+
+  <table class="table table-bordered table-striped" id="thetable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>No KK</th>
+        <th>Nama</th>
+        <th>Tanggal Periksa</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1234567890</td>
+        <td>Gaksa Gantara</td>
+        <td>20/10/2018</td>
+
+        <!-- button -> pake link class btn-btn -->
+        <td> 
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">View</button>
+          <a href="#" class="btn btn-success">Accepted</a>
+        </td>
+      </tr>
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Data Transaksi</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="no_kk">Nomor Urut</label>
+                  <input type="text" class="form-control" id="no_kk" value="13" readonly="" >
+                </div>
+                <div class="form-group">
+                  <label for="no_kk">Nomor Kartu Keluarga</label>
+                  <input type="text" class="form-control" id="no_kk" value="1234567890" readonly="" >
+                </div>
+                <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control" id="nama" value ="Gaksa Gantara" readonly="">
+                </div>
+                
+                <div class="form-group">
+                  <label>Obat</label>
+                  <input type="text" class="form-control" id="nama" value ="Paracetamol" readonly="">
+                  <label>Jumlah</label>
+                  <input type="text" class="form-control" id="nama" value ="2 strip" readonly="">
+                </div>
+              </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </tbody>
+
+  </table>
+  
+
+  
+</div>	
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#thetable').DataTable();
+  } );
+</script>
+
+
+
+
+<!--  -->
+<script src="sendiri.js"> </script>
+
+
+</body>
+</html>

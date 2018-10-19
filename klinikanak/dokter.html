@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dokter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet"  href="css/style.css">
+
+</head>
+<body>
+
+ <div class="wrapper">
+
+  <nav class="navbar navbar-default">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+    data-target=".sidebar-collapse" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#">Klinik Anak</a>
+</div>
+
+</nav>
+<nav class="navbar-default navbar-side">
+ <div class="sidebar-collapse">
+  <div class="user">
+    <img src="img/user.png">
+    <h3>Nama Dokter</h3>
+  </div>
+  <ul class="nav" id="main-menu">
+    <li><a href="dokter.html"> <i class="fa fa-users"></i> Antrian Pasien</a></li>
+    
+
+  </ul>
+</div>
+</nav>
+<div class="page-wrapper">
+ <div class="page-inner">
+  <h3>Data Pasien</h3>
+
+
+  <br>
+  <br>
+
+  <table class="table table-bordered table-striped" id="thetable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Gender</th>
+        <th>Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Gaksa Gantara</td>
+        <td>Laki-Laki</td>
+
+        <!-- button -> pake link class btn-btn -->
+        <td> 
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Periksa</button>
+          
+        </td>
+      </tr>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Data Pasien</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control" id="nama" value ="Gaksa Gantara" readonly="">
+                </div>
+                <div class="form-group">
+                  <label for="no_kk">Nomor Kartu Keluarga</label>
+                  <input type="text" class="form-control" id="no_kk" value="1234567890" readonly="" >
+                </div>
+                <div class="form-group">
+                  <label>Jenis Kelamin</label>
+                  <input type="text" class= "form-control" name="jk" value="Laki-Laki" readonly="">
+
+                </div>
+                <div class="form-group">
+                  <label for="ttl">Tempat Tanggal Lahir</label>
+                  <input type="text" class="form-control" id="ttl" value="01/07/1997" readonly="">
+                </div>
+                <div class="form-group">
+                  <label for="alamat">Penyakit</label>
+                  <textarea class="form-control" id="alamat" rows="3" readonly="">Flu</textarea>
+                </div>
+                <div class="form-group">
+                  <label>Obat</label>
+                  <select class="form-control" name="faculty_id">
+                    <option>- Pilih Obat -</option>
+                    <option>Paracetamol</option>
+                    <option>Cefixime</option>
+                    <option>Nama Obat lainnya</option>
+
+                  </select>
+                </div>
+              </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </tbody>
+
+  </table>
+
+
+
+</div>	
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#thetable').DataTable();
+  } );
+</script>
+
+
+
+
+<!--  -->
+<script src="sendiri.js"> </script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apoteker</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet"  href="css/style.css">
+
+</head>
+<body>
+
+ <div class="wrapper">
+
+  <nav class="navbar navbar-default">
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+    data-target=".sidebar-collapse" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#">Klinik Anak</a>
+</div>
+
+</nav>
+<nav class="navbar-default navbar-side">
+ <div class="sidebar-collapse">
+  <div class="user">
+    <img src="img/user.png">
+    <h3>Nama Apoteker</h3>
+  </div>
+  <ul class="nav" id="main-menu">
+    <li><a href="apoteker_obat.html"> <i class="fa fa-tablet"></i> Obat</a></li>
+    <li><a href="apoteker_transaksi.html"> <i class="fa fa-handshake-o"></i> Transaksi</a></li>
+  </ul>
+</div>
+</nav>
+<div class="page-wrapper">
+ <div class="page-inner">
+  <h3>Data Obat</h3>
+  
+
+
+  <br>
+  <br>
+
+  <table class="table table-bordered table-striped" id="thetable">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Stok</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Paracetamol</td>
+        <td>100</td>
+
+        <!-- button -> pake link class btn-btn -->
+        
+      </tr>
+
+      
+
+
+    </tbody>
+
+  </table>
+  
+
+  
+</div>	
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#thetable').DataTable();
+  } );
+</script>
+
+
+
+
+<!--  -->
+<script src="sendiri.js"> </script>
+
+
+</body>
+</html>
